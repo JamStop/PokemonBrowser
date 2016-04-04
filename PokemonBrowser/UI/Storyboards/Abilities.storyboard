@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="K9B-lD-VgZ">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Abilities-->
+        <scene sceneID="3oM-67-bhf">
+            <objects>
+                <navigationController id="K9B-lD-VgZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Abilities" id="xP5-q2-MbT"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kkx-2p-N0x">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="NHs-al-Kuv" kind="relationship" relationship="rootViewController" id="gsK-hE-dyQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TdP-yL-vYd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-218.5" y="304.5"/>
+        </scene>
+        <!--Abilities-->
+        <scene sceneID="Iqj-6k-b9d">
+            <objects>
+                <viewController id="NHs-al-Kuv" customClass="AbilityViewController" customModule="PokemonBrowser" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7gc-Aa-t5z"/>
+                        <viewControllerLayoutGuide type="bottom" id="3zP-fx-IYU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HPw-uS-sON" customClass="AbilityView" customModule="PokemonBrowser" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vXw-6f-MFz">
+                                <rect key="frame" x="-4" y="64" width="383" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vXw-6f-MFz" firstAttribute="leading" secondItem="HPw-uS-sON" secondAttribute="leadingMargin" constant="-20" id="JcY-Fv-W5T"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vXw-6f-MFz" secondAttribute="trailing" constant="-20" id="aLH-Ax-ujO"/>
+                            <constraint firstItem="3zP-fx-IYU" firstAttribute="top" secondItem="vXw-6f-MFz" secondAttribute="bottom" id="dRs-JR-x6T"/>
+                            <constraint firstItem="vXw-6f-MFz" firstAttribute="top" secondItem="7gc-Aa-t5z" secondAttribute="bottom" id="hmI-qM-0Gx"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="tableView" destination="vXw-6f-MFz" id="oga-pJ-cC5"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Abilities" id="S8A-wl-VdD"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JVb-2g-uIz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="251.5" y="304.5"/>
+        </scene>
+    </scenes>
+</document>

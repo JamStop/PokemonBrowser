@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xuc-m4-AHc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pokemon-->
+        <scene sceneID="RLO-7U-lWp">
+            <objects>
+                <navigationController id="xuc-m4-AHc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Pokemon" id="mhZ-oy-FkE"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ai5-oT-NUc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Wrp-lv-rdC" kind="relationship" relationship="rootViewController" id="Bdp-8D-8C4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iGL-Jc-UW6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-332.5" y="340.5"/>
+        </scene>
+        <!--Pokemon-->
+        <scene sceneID="X16-vh-fgv">
+            <objects>
+                <viewController id="Wrp-lv-rdC" customClass="PokemonViewController" customModule="PokemonBrowser" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8GU-W9-j6Z"/>
+                        <viewControllerLayoutGuide type="bottom" id="XLz-oX-iB1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dh0-tS-TWE" customClass="PokemonView" customModule="PokemonBrowser" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ecu-vQ-mUx">
+                                <rect key="frame" x="-4" y="64" width="383" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ecu-vQ-mUx" firstAttribute="top" secondItem="8GU-W9-j6Z" secondAttribute="bottom" id="CO9-LE-9Yr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ecu-vQ-mUx" secondAttribute="trailing" constant="-20" id="Qur-AE-1et"/>
+                            <constraint firstItem="XLz-oX-iB1" firstAttribute="top" secondItem="ecu-vQ-mUx" secondAttribute="bottom" id="hpK-y7-Lyh"/>
+                            <constraint firstItem="ecu-vQ-mUx" firstAttribute="leading" secondItem="dh0-tS-TWE" secondAttribute="leadingMargin" constant="-20" id="k5S-Sy-25n"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="tableView" destination="ecu-vQ-mUx" id="e3f-Ld-TG9"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Pokemon" id="5Ud-eq-VFl"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kmg-iW-Uh0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="201.5" y="340.5"/>
+        </scene>
+    </scenes>
+</document>
