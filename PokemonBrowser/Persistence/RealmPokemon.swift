@@ -16,5 +16,7 @@ class RealmPokemon: Object {
     dynamic var spriteURL = ""
     dynamic var types: [String] = []
     
-    
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 }

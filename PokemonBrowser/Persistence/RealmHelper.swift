@@ -25,6 +25,29 @@ class RealmHelper {
     let disposeBag = DisposeBag()
     
     // MARK: - Public helper function
+    func addPokemonToRealm(json: JSONPokemon) {
+        let pokemon = JSONPokemonToRealmPokemon(json)
+        
+        try! realm.write {
+            realm.add(pokemon, update: true)
+        }
+    }
+    
+    func addAbilityToRealm(json: JSONAbility) {
+        let ability = JSONAbilityToRealmAbility(json)
+        
+        try! realm.write {
+            realm.add(ability, update: true)
+        }
+    }
+    
+    func rx_getPokemon() -> Results<RealmPokemon> {
+        return realm.objects(RealmPokemon)
+    }
+    
+    func rx_getAbilities() -> Results<RealmAbility> {
+        return realm.objects(RealmAbility)
+    }
     
     // MARK: - Private Conversions
     private func JSONPokemonToRealmPokemon(json: JSONPokemon) -> RealmPokemon {

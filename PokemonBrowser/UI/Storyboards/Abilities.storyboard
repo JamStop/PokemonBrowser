@@ -33,7 +33,7 @@
                         <viewControllerLayoutGuide type="top" id="7gc-Aa-t5z"/>
                         <viewControllerLayoutGuide type="bottom" id="3zP-fx-IYU"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="HPw-uS-sON">
+                    <view key="view" contentMode="scaleToFill" id="HPw-uS-sON" customClass="AbilityView" customModule="PokemonBrowser" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -49,6 +49,9 @@
                             <constraint firstItem="3zP-fx-IYU" firstAttribute="top" secondItem="vXw-6f-MFz" secondAttribute="bottom" id="dRs-JR-x6T"/>
                             <constraint firstItem="vXw-6f-MFz" firstAttribute="top" secondItem="7gc-Aa-t5z" secondAttribute="bottom" id="hmI-qM-0Gx"/>
                         </constraints>
+                        <connections>
+                            <outlet property="tableView" destination="vXw-6f-MFz" id="oga-pJ-cC5"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Abilities" id="S8A-wl-VdD"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>

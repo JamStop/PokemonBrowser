@@ -109,7 +109,6 @@ class LoadingHUD: UIView {
         let originX = view.center.x - (side/2)
         let originY = view.center.y - (side/2)
         
-        //Change By Sohil
         return CGRectMake(originX, originY - 25, side, side)
     }
     

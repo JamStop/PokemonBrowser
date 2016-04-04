@@ -13,4 +13,8 @@ class RealmAbility: Object {
     dynamic var id = 0
     dynamic var name = ""
     dynamic var pokemon: [String] = []
+    
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 }
